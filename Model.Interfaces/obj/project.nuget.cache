@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0l2260/jDQ2cY3A/NCRm/KsxEg47AfPzwYeneDuv4XNBlPFTxy/fkOe7X3opFUbK5rQshcrFH4txZ2/4qKm+Aw==",
+  "dgSpecHash": "u4Fv2Uct6+LBf5hCltdMCIGXu1hxxzk2Fn1rWvDod2lY840XGf5CawkGf+zYixt+wrZDstopdSKMdP/G0cZTgA==",
   "success": true,
-  "projectFilePath": "/Users/joshuapresley/Projects/DungeonMasterHelper/Model.Interfaces/Model.Interfaces.csproj",
+  "projectFilePath": "/Users/joshuapresley/Projects/Dungeon-Master-Assistant/Model.Interfaces/Model.Interfaces.csproj",
   "expectedPackageFiles": [
     "/Users/joshuapresley/.nuget/packages/microsoft.entityframeworkcore/7.0.14/microsoft.entityframeworkcore.7.0.14.nupkg.sha512",
     "/Users/joshuapresley/.nuget/packages/microsoft.entityframeworkcore.abstractions/7.0.14/microsoft.entityframeworkcore.abstractions.7.0.14.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/joshuapresley/Projects/DungeonMasterHelper/Model.Interfaces/Model.Interfaces.csproj": {}
+    "/Users/joshuapresley/Projects/Dungeon-Master-Assistant/Model.Interfaces/Model.Interfaces.csproj": {}
   },
   "projects": {
-    "/Users/joshuapresley/Projects/DungeonMasterHelper/Model.Interfaces/Model.Interfaces.csproj": {
+    "/Users/joshuapresley/Projects/Dungeon-Master-Assistant/Model.Interfaces/Model.Interfaces.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/joshuapresley/Projects/DungeonMasterHelper/Model.Interfaces/Model.Interfaces.csproj",
+        "projectUniqueName": "/Users/joshuapresley/Projects/Dungeon-Master-Assistant/Model.Interfaces/Model.Interfaces.csproj",
         "projectName": "Model.Interfaces",
-        "projectPath": "/Users/joshuapresley/Projects/DungeonMasterHelper/Model.Interfaces/Model.Interfaces.csproj",
+        "projectPath": "/Users/joshuapresley/Projects/Dungeon-Master-Assistant/Model.Interfaces/Model.Interfaces.csproj",
         "packagesPath": "/Users/joshuapresley/.nuget/packages/",
-        "outputPath": "/Users/joshuapresley/Projects/DungeonMasterHelper/Model.Interfaces/obj/",
+        "outputPath": "/Users/joshuapresley/Projects/Dungeon-Master-Assistant/Model.Interfaces/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/joshuapresley/.nuget/NuGet/NuGet.Config"
