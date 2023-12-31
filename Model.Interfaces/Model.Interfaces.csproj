@@ -8,9 +8,11 @@
 
   <ItemGroup>
     <None Remove="Character\" />
+    <None Remove="DatabaseAccess\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Character\" />
+    <Folder Include="DatabaseAccess\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.14" />

@@ -1,6 +1,6 @@
 ﻿
 using Model.Interfaces;
-namespace Model.Impl.Character
+namespace Model.Impl
 {
 	/// <summary	>
 	/// Base representation of any 'being'
@@ -9,6 +9,7 @@ namespace Model.Impl.Character
 	/// </summary>
 	public class Character: ICharacter
     {
+		public virtual Guid Id { get; set; }
 		public virtual int Strength { get; set; }
         public virtual int Dexterity { get; set; }
         public virtual int Constitution { get; set; }
@@ -28,11 +29,7 @@ namespace Model.Impl.Character
 		
 		public virtual int MaxHitPoints { get; set; }
 
-		public virtual int Level { get; set; }
-
-        public Character()
-		{
-		}
+		public virtual int Level { get; set; } 
 	}
 }
 
