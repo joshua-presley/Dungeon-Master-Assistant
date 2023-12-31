@@ -9,10 +9,12 @@
   <ItemGroup>
     <None Remove="Character\" />
     <None Remove="DatabaseAccess\" />
+    <None Remove="Location\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Character\" />
     <Folder Include="DatabaseAccess\" />
+    <Folder Include="Location\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Model.Interfaces\Model.Interfaces.csproj" />
