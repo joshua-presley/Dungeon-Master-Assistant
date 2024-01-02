@@ -2,34 +2,38 @@
 using Model.Interfaces;
 namespace Model.Impl
 {
-	/// <summary	>
+	/// <summary>
 	/// Base representation of any 'being'
 	/// in the game, be they an PC, NPC,
 	/// Monster, etc.
 	/// </summary>
 	public class Character: ICharacter
     {
-		public virtual Guid Id { get; set; }
-		public virtual int Strength { get; set; }
-        public virtual int Dexterity { get; set; }
-        public virtual int Constitution { get; set; }
-        public virtual int Intelligence { get; set; }
-        public virtual int Wisdom { get; set; }
-        public virtual int Charisma { get; set; }
+		public Guid Id { get; set; }
+		public int Strength { get; set; }
+        public int Dexterity { get; set; }
+        public int Constitution { get; set; }
+        public int Intelligence { get; set; }
+        public int Wisdom { get; set; }
+        public int Charisma { get; set; }
 
-		public virtual string Name { get; set; }
+		public string Name { get; set; }
 		/// <summary>
 		/// This field is meant to be used as an ongoing 
 		/// update, as opposed to background which shouldn't change.
 		/// </summary>
-		public virtual string Notes { get; set; }
-		public virtual string Background { get; set; }
+		public string Notes { get; set; }
+		public string Background { get; set; }
 
-		public virtual string Class { get; set; }
+		public string Class { get; set; }
 		
-		public virtual int MaxHitPoints { get; set; }
+		public int MaxHitPoints { get; set; }
 
-		public virtual int Level { get; set; } 
+		public int Level { get; set; } 
+
+		public Guid LocationId { get; set; }
+		public ILocation CharacterLocation { get; set; }
+
 	}
 }
 

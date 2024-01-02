@@ -10,9 +10,9 @@ using Model.Impl;
 
 namespace Model.Impl.Migrations
 {
-    [DbContext(typeof(CharacterRepository))]
-    [Migration("20231231192449_InitialCreate")]
-    partial class InitialCreate
+    [DbContext(typeof(BaseContext))]
+    [Migration("20240102003235_LocationAndCharacter")]
+    partial class LocationAndCharacter
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -27,14 +27,12 @@ namespace Model.Impl.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Background")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<int>("Charisma")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Class")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<int>("Constitution")
@@ -49,15 +47,16 @@ namespace Model.Impl.Migrations
                     b.Property<int>("Level")
                         .HasColumnType("INTEGER");
 
+                    b.Property<Guid>("LocationId")
+                        .HasColumnType("TEXT");
+
                     b.Property<int>("MaxHitPoints")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Notes")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<int>("Strength")
@@ -68,7 +67,60 @@ namespace Model.Impl.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Items");
+                    b.HasIndex("LocationId");
+
+                    b.ToTable("Characters");
+                });
+
+            modelBuilder.Entity("Model.Impl.Location", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("ParentId")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ParentId");
+
+                    b.ToTable("Locations");
+                });
+
+            modelBuilder.Entity("Model.Impl.Character", b =>
+                {
+                    b.HasOne("Model.Impl.Location", "CharacterLocation")
+                        .WithMany("Characters")
+                        .HasForeignKey("LocationId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("CharacterLocation");
+                });
+
+            modelBuilder.Entity("Model.Impl.Location", b =>
+                {
+                    b.HasOne("Model.Impl.Location", "ParentLocation")
+                        .WithMany("SubLocs")
+                        .HasForeignKey("ParentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ParentLocation");
+                });
+
+            modelBuilder.Entity("Model.Impl.Location", b =>
+                {
+                    b.Navigation("Characters");
+
+                    b.Navigation("SubLocs");
                 });
 #pragma warning restore 612, 618
         }
