@@ -1,5 +1,5 @@
 ﻿using System;
-namespace Model.Interfaces.DatabaseAccess
+namespace Model.Interfaces
 {
 	public interface IBaseRepository<T> where T: class
 	{

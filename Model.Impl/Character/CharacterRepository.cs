@@ -1,11 +1,9 @@
-﻿using System;
+﻿using Model.Interfaces;
 namespace Model.Impl
 {
-	public class CharacterRepository: BaseRepository<Character>
+	public class CharacterRepository: BaseRepository<Character>, ICharacterRepository
 	{
-		public CharacterRepository()
-		{
-		}
+		public CharacterRepository(BaseContext context): base(context) { }
 	}
 }
 

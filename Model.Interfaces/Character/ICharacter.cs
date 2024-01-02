@@ -27,6 +27,9 @@
          int MaxHitPoints { get; set; }
 
          int Level { get; set; }
+
+		 Guid LocationId { get; set; }
+         ILocation CharacterLocation { get; set; }
     }
 }
 
